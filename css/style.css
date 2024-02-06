@@ -1,0 +1,48 @@
+:root {
+    --light-gray: rgb(200, 200, 200);
+    --white: rgb(235, 235, 235);
+}
+
+body {
+    background: var(--white);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI';
+    width: 100vw;
+    height: 100vh;
+}
+
+#helpboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 150%;
+}
+
+#helpboard img {
+    max-height: 20%;
+    margin-left: 10%;
+}
+
+#playboard {
+    background: var(--light-gray);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 20%;
+    height: 40%;
+    margin: 3%;
+}
+
+.square {
+    border: 1px solid black;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10%;
+}
