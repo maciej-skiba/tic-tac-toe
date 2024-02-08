@@ -42,6 +42,7 @@ function Reset() {
     matchResultDiv.style.display = "none";
     helpboardDiv.style.display = "flex";
     moveCounter = 0;
+    playboardDiv.style.pointerEvents = "auto";
 }
 
 function Move() {
