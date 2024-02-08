@@ -1,10 +1,14 @@
 :root {
-    --light-gray: rgb(200, 200, 200);
-    --white: rgb(235, 235, 235);
+    --light-creamy: rgb(248, 232, 160);
+    --dark-creamy: rgb(189, 176, 121);
+    --creamy: rgb(225, 210, 145);
+    --white: rgb(236, 233, 219);
+    --light-gray: rgb(225, 225, 225);
+    --green: rgb(171, 224, 185);
 }
 
 body {
-    background: var(--white);
+    background: var(--green);
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -27,13 +31,20 @@ body {
     margin-left: 10%;
 }
 
+#match-result {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 150%;
+}
+
 #playboard {
-    background: var(--light-gray);
+    background: var(--white);   
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    width: 20%;
-    height: 40%;
+    width: 25vw;
+    height: 25vw;
     margin: 3%;
 }
 
@@ -41,10 +52,32 @@ body {
     border: 1px solid black;
     height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-justify: center;
+    font-size: 200%;
+    transition: background 0.3s;
 }
 
-#buttons {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10%;
+.square:hover {
+    background: var(--light-gray);
+}
+
+#reset-btn {
+    height: 5%;
+    width: 5%;
+    font-family: 'Segoe UI';
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    #playboard {
+        width: 50vw;
+        height: 50vw;
+    }
+
+    #reset-btn {
+        width: 10%
+    }
 }
